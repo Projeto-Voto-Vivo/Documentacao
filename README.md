@@ -1,8 +1,7 @@
 # Projeto Voto Vivo
 
 
-## Resumo executivo
-
+## Resumo do projeto
 O **Voto Vivo** é uma iniciativa de educação política, transparência e participação cidadã que busca tornar informações públicas sobre o Poder Legislativo brasileiro mais claras, acessíveis e úteis. O projeto combina **dados abertos**, **tecnologia** e **conteúdo educacional** para reduzir a distância entre cidadãos e informações institucionais, apoiando a compreensão da atuação de deputados e senadores, do processo legislativo e do uso de recursos públicos.
 
 Na aplicação pública, o Voto Vivo se apresenta como uma central de dados legislativos com cobertura nacional de Câmara e Senado, oferecendo consulta de parlamentares, indicadores de gastos, votos e emendas, rankings, perfis individuais, proposições, informações sobre eleições e uma área de educação cidadã.
