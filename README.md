@@ -15,7 +15,7 @@ Este repositório deve funcionar como ponto central de documentação do ecossis
 - **Backend:** API, regras de negócio, integração e serviços;
 - **Dados:** aquisição, transformação, normalização, qualidade e atualização das bases.
 
-**Objetivos.** 
+**Objetivos** 
 
 Os objetivos centrais são aproximar cidadãos da política, diminuir a distância entre as pessoas e a informação institucional, organizar conteúdos confiáveis e incentivar uma leitura mais consciente dos temas públicos. A área educacional reforça esse propósito ao explicar a organização do Estado, Congresso Nacional, funções dos parlamentares, custos, emendas, processo legislativo e sistema eleitoral. 
 
