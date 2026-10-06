@@ -48,7 +48,7 @@ Backend / API
 Frontend
       │
       ▼
-     Usuário
+Usuário
 ```
 
 O **Data Aggregator** é responsável pela entrada e atualização dos dados no sistema.
