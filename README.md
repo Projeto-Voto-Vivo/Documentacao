@@ -86,7 +86,7 @@ Visão geral dos componentes do Voto Vivo e da comunicação entre eles.
 
 * [Diagramas](./diagramas.md)
 
-Diagramas Mermaid de arquitetura, integração, fontes de dados, ETL, fluxos e endpoints.
+Diagramas Mermaid de arquitetura, infraestrutura, integração, fontes de dados, ETL, fluxos e endpoints.
 
 ### 💻 Aplicação
 

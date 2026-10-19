@@ -17,6 +17,7 @@ Diagramas em [Mermaid](https://mermaid.js.org/) que ilustram o funcionamento do 
 11. [Dados armazenados](#11-dados-armazenados)
 12. [Ambiente de desenvolvimento](#12-ambiente-de-desenvolvimento)
 13. [Fluxo de desenvolvimento](#13-fluxo-de-desenvolvimento)
+14. [Infraestrutura atual](#14-infraestrutura-atual)
 
 ---
 
@@ -387,6 +388,43 @@ flowchart LR
     E --> F["Pull Request"]
 
     B -. "falhou" .-> A
+```
+
+---
+
+## 14. Infraestrutura atual
+
+Estado atual da hospedagem: o Cloudflare atua como proxy reverso e cache na frente de todo o tráfego, tanto do Frontend quanto da API. O Frontend roda em PaaS (Vercel) integrado ao repositório. Backend, banco de dados e Data Aggregator ficam na mesma instância gratuita da Oracle Cloud, com Backend e MySQL em containers.
+
+```mermaid
+flowchart LR
+    U(["Usuário<br/>navegador"])
+    GH["Repositório Git<br/>Frontend"]
+    FO["Fontes Oficiais<br/>Câmara · Senado · Portal da Transparência"]
+
+    CF["Cloudflare<br/>proxy reverso · cache"]
+
+    subgraph Vercel["Vercel (PaaS)"]
+        FE["Frontend<br/>Next.js (SSR)"]
+    end
+
+    subgraph Oracle["Oracle Cloud · instância gratuita"]
+        subgraph Containers["Containers"]
+            BE["Backend<br/>Node.js · Express"]
+            DB[("MySQL")]
+        end
+        DA["Data Aggregator<br/>Python · ETL"]
+    end
+
+    GH -->|"deploy automático<br/>a cada push"| FE
+    U -->|"acessa o site"| CF
+    CF -->|"cache MISS<br/>(páginas)"| FE
+    U -.->|"chamadas à API<br/>(navegador)"| CF
+    FE -.->|"chamadas à API<br/>(SSR)"| CF
+    CF -->|"cache MISS<br/>(API)"| BE
+    BE -->|"Prisma"| DB
+    FO -->|"APIs HTTP"| DA
+    DA -->|"escrita"| DB
 ```
 
 ---
