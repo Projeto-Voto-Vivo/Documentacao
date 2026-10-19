@@ -84,6 +84,10 @@ A documentação foi organizada por assunto para facilitar a consulta.
 
 Visão geral dos componentes do Voto Vivo e da comunicação entre eles.
 
+* [Diagramas](./diagramas.md)
+
+Diagramas Mermaid de arquitetura, integração, fontes de dados, ETL, fluxos e endpoints.
+
 ### 💻 Aplicação
 
 * [Frontend](./frontend.md)
